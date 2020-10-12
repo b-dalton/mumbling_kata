@@ -53,9 +53,26 @@ RSpec.describe Mumbler do
 
             # Act 
             first_mumbled = mumbler.word_mumbler("abc")
+            second_mumbled = mumbler.word_mumbler("dfh")
+            third_mumbled = mumbler.word_mumbler("zqi")
 
             # Assert 
             expect(first_mumbled).to eq("A-Bb-Ccc")
+            expect(second_mumbled).to eq("D-Ff-Hhh")
+            expect(third_mumbled).to eq("Z-Qq-Iii")
+        end
+    end
+
+    context 'given a string longer than three characters' do
+        it 'returns that string mumbled' do
+            # Arrange
+            mumbler = Mumbler.new
+
+            # Act 
+            first_mumbled = mumbler.word_mumbler("abcd")
+
+            # Assert 
+            expect(first_mumbled).to eq("A-Bb-Ccc-Dddd")
         end
     end
 end
