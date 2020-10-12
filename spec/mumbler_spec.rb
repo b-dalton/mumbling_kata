@@ -20,23 +20,12 @@ RSpec.describe Mumbler do
             mumbler = Mumbler.new
 
             # Act 
-            mumbled = mumbler.word_mumbler("a")
+            first_mumbled = mumbler.word_mumbler("a")
+            second_mumbled = mumbler.word_mumbler("b")
 
             # Assert 
-            expect(mumbled).to eq("A")
-        end
-    end
-
-    context 'given another single character' do
-        it 'returns that character capitalised' do
-            # Arrange
-            mumbler = Mumbler.new
-
-            # Act 
-            mumbled = mumbler.word_mumbler("b")
-
-            # Assert 
-            expect(mumbled).to eq("B")
+            expect(first_mumbled).to eq("A")
+            expect(second_mumbled).to eq("B")
         end
     end
 
@@ -46,36 +35,14 @@ RSpec.describe Mumbler do
             mumbler = Mumbler.new
 
             # Act 
-            mumbled = mumbler.word_mumbler("ab")
+            first_mumbled = mumbler.word_mumbler("ab")
+            second_mumbled = mumbler.word_mumbler("bd")
+            third_mumbled = mumbler.word_mumbler("ce")
 
             # Assert 
-            expect(mumbled).to eq("A-Bb")
-        end
-    end
-
-    context 'given another two character string' do
-        it 'returns that string mumbled' do
-            # Arrange
-            mumbler = Mumbler.new
-
-            # Act 
-            mumbled = mumbler.word_mumbler("bd")
-
-            # Assert 
-            expect(mumbled).to eq("B-Dd")
-        end
-    end
-
-    context 'given another two character string' do
-        it 'returns that string mumbled' do
-            # Arrange
-            mumbler = Mumbler.new
-
-            # Act 
-            mumbled = mumbler.word_mumbler("ce")
-
-            # Assert 
-            expect(mumbled).to eq("C-Ee")
+            expect(first_mumbled).to eq("A-Bb")
+            expect(second_mumbled).to eq("B-Dd")
+            expect(third_mumbled).to eq("C-Ee")
         end
     end
 
@@ -85,10 +52,10 @@ RSpec.describe Mumbler do
             mumbler = Mumbler.new
 
             # Act 
-            mumbled = mumbler.word_mumbler("abc")
+            first_mumbled = mumbler.word_mumbler("abc")
 
             # Assert 
-            expect(mumbled).to eq("A-Bb-Ccc")
+            expect(first_mumbled).to eq("A-Bb-Ccc")
         end
     end
 end
