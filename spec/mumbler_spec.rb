@@ -65,4 +65,30 @@ RSpec.describe Mumbler do
             expect(mumbled).to eq("B-Dd")
         end
     end
+
+    context 'given another two character string' do
+        it 'returns that string mumbled' do
+            # Arrange
+            mumbler = Mumbler.new
+
+            # Act 
+            mumbled = mumbler.word_mumbler("ce")
+
+            # Assert 
+            expect(mumbled).to eq("C-Ee")
+        end
+    end
+
+    context 'given a three character string' do
+        it 'returns that string mumbled' do
+            # Arrange
+            mumbler = Mumbler.new
+
+            # Act 
+            mumbled = mumbler.word_mumbler("abc")
+
+            # Assert 
+            expect(mumbled).to eq("A-Bb-Ccc")
+        end
+    end
 end
