@@ -1,5 +1,4 @@
 class Mumbler
-    def word_mumbler(word)
-        "A"
+    def word_mumbler(string)
     end
 end
