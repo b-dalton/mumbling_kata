@@ -1,9 +1,6 @@
 class Mumbler
     def word_mumbler(string)
-        if string.length <= 1
-            string.upcase
-        else
-            "A-Bb"
-        end
+        return string.upcase if string.length <= 1
+        return string[0].upcase + "-" + string[1].upcase + string[1].downcase
     end
 end

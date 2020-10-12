@@ -41,7 +41,7 @@ RSpec.describe Mumbler do
     end
 
     context 'given a two character string' do
-        it 'returns that character capitalised' do
+        it 'returns that string mumbled' do
             # Arrange
             mumbler = Mumbler.new
 
@@ -50,6 +50,19 @@ RSpec.describe Mumbler do
 
             # Assert 
             expect(mumbled).to eq("A-Bb")
+        end
+    end
+
+    context 'given another two character string' do
+        it 'returns that string mumbled' do
+            # Arrange
+            mumbler = Mumbler.new
+
+            # Act 
+            mumbled = mumbler.word_mumbler("bd")
+
+            # Assert 
+            expect(mumbled).to eq("B-Dd")
         end
     end
 end
