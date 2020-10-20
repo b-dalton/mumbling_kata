@@ -139,7 +139,7 @@ RSpec.describe Mumbler do
             mumbled_output = @mumbler.mumble_letters("testing")
 
             # Assert
-            expect(mumbled_output).to eq("T-Ee-Sss-Tttt-Iiiii-Nnnnnn-Ggggggg")
+            expect(mumbled_output).to eq("t-Ee-Sss-Tttt-Iiiii-Nnnnnn-Ggggggg")
         end
     end
 end
